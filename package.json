@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "ng serve -H 0.0.0.0 --aot --port 4001",
     "build": "ng build",
+    "deploy:github": "ng build --prod --base-href 'https://jessemoon0.github.io/dynamic-forms/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
