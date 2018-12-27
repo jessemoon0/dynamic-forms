@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-// Components
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 
 // Modules
+import { DragulaModule } from 'ng2-dragula';
 import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from '../app-routing.module';
-import {DynamicFormComponent} from '../dynamic-form/dynamic-form.component';
-import {DynamicFormQuestionComponent} from '../dynamic-form-question/dynamic-form-question.component';
-import { DragulaModule } from 'ng2-dragula';
+
+// Components
+import { DynamicFormComponent } from '../dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from '../dynamic-form-question/dynamic-form-question.component';
 import { DragulaPlaygroundComponent } from '../dragula-playground/dragula-playground.component';
+import { DragulaFormsComponent } from '../dragula-forms/dragula-forms.component';
+import { DynamicFormRootComponent } from '../dynamic-form-root/dynamic-form-root.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    HeaderComponent,
-    FooterComponent,
     DynamicFormComponent,
     DynamicFormQuestionComponent,
-    DragulaPlaygroundComponent
+    DragulaPlaygroundComponent,
+    DragulaFormsComponent,
+    DynamicFormRootComponent
   ],
   imports: [
     SharedModule,
@@ -29,10 +28,7 @@ import { DragulaPlaygroundComponent } from '../dragula-playground/dragula-playgr
     DragulaModule.forRoot()
   ],
   exports: [
-    AppRoutingModule,
-    // We are using the header component selector in the app.component.html
-    HeaderComponent,
-    FooterComponent
+    AppRoutingModule
   ],
   providers: []
 })

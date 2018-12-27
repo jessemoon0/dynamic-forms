@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './core/home/home.component';
+import { DynamicFormRootComponent } from './dynamic-form-root/dynamic-form-root.component';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
+    path: 'dynamic-forms',
+    component: DynamicFormRootComponent
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'dynamic-forms',
     pathMatch: 'full'
   }
 ];
