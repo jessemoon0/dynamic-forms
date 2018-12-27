@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,7 +10,6 @@ import { AppComponent } from './app.component';
 import { TransformToFormGroupService } from './services/transform-to-formgroup.service';
 import {QuestionDataService} from './services/question-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
 
 
 @NgModule({

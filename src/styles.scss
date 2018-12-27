@@ -6,4 +6,8 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import 'assets/scss/themes/mat-theme';
+@import 'assets/scss/themes/dragula';
+
+@import 'assets/scss/abstract/utilities';
+
 @import 'assets/scss/components/mat-divider';

@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from '../app-routing.module';
 import {DynamicFormComponent} from '../dynamic-form/dynamic-form.component';
 import {DynamicFormQuestionComponent} from '../dynamic-form-question/dynamic-form-question.component';
+import { DragulaModule } from 'ng2-dragula';
+import { DragulaPlaygroundComponent } from '../dragula-playground/dragula-playground.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import {DynamicFormQuestionComponent} from '../dynamic-form-question/dynamic-for
     HeaderComponent,
     FooterComponent,
     DynamicFormComponent,
-    DynamicFormQuestionComponent
+    DynamicFormQuestionComponent,
+    DragulaPlaygroundComponent
   ],
   imports: [
     SharedModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragulaModule.forRoot()
   ],
   exports: [
     AppRoutingModule,

@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10rem">
+  <div dragula="PERSON" id="left" [(dragulaModel)]="left" class="u-border">
+    <div *ngFor="let person of left">{{person | json}}</div>
+  </div>
+  <div dragula="PERSON" id="right" [(dragulaModel)]="right" class="u-border">
+    <div *ngFor="let person of right">{{person | json}}</div>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
