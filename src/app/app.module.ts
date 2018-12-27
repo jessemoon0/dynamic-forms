@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 // Services
 import { TransformToFormGroupService } from './services/transform-to-formgroup.service';
 import {QuestionDataService} from './services/question-data.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import {QuestionDataService} from './services/question-data.service';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     CoreModule
   ],

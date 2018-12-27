@@ -1,5 +1,5 @@
 <div [formGroup]="form">
-  <label [attr.for]="question.key">{{ question.label }}</label>
+  <label [for]="question.key">{{ question.label }}</label>
 
   <!-- Classify controls by controlType -->
   <div [ngSwitch]="question.controlType">

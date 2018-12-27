@@ -5,7 +5,6 @@ import { QuestionBase } from '../models/base-class/question-base';
 @Injectable()
 export class TransformToFormGroupService {
 
-  constructor() { }
   toFormGroup(questions: QuestionBase<any>[] ) {
     const group: any = {};
 

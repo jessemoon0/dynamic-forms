@@ -48,7 +48,20 @@ export class QuestionDataService {
         label: 'Last Name',
         type: 'text',
         order: 4
-      })
+      }),
+
+      new DropdownQuestion({
+        key: 'brave',
+        label: 'Bravery Rating',
+        required: true,
+        options: [
+          {key: 'solid',  value: 'Solid'},
+          {key: 'great',  value: 'Great'},
+          {key: 'good',   value: 'Good'},
+          {key: 'unproven', value: 'Unproven'}
+        ],
+        order: 5
+      }),
     ];
 
     return questions.sort((a, b) => a.order - b.order);
