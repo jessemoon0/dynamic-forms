@@ -51,7 +51,7 @@ export class QuestionDataService {
       }),
 
       new DropdownQuestion({
-        key: 'brave',
+        key: 'brave2',
         label: 'Bravery Rating',
         required: true,
         options: [
