@@ -1,0 +1,33 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10rem">
+
+  <div class="u-border" dragula="FORM" id="controls" [(dragulaModel)]="controlTypes">
+    <app-dynamic-form-question *ngFor="let control of controlTypes" [question]="control" [form]="form"></app-dynamic-form-question>
+  </div>
+
+  <form (ngSubmit)="onSubmit()"
+        [formGroup]="form"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="1rem">
+
+    <div *ngFor="let question of questions" dragula="FORM" id="form" [(dragulaModel)]="questions">
+      <app-dynamic-form-question [question]="question" [form]="form"></app-dynamic-form-question>
+    </div>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">Save</button>
+
+  </form>
+</div>
+
+<!-- Print the form results -->
+<strong>Saved the following values</strong>
+<br>
+<pre>
+  {{payLoad}}
+</pre>
+
+<!-- Add a control-->
+<div fxLayout="row" fxLayoutGap="1rem">
+  <button type="button" mat-raised-button color="accent" (click)="onAddTextBox()">Add text box</button>
+  <button type="button" mat-raised-button color="accent" (click)="onAddDropdown()">Add dropdown</button>
+</div>

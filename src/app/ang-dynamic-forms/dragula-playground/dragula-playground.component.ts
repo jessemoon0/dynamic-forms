@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DragulaService } from 'ng2-dragula';
 
 class Person {
@@ -13,15 +13,15 @@ class Person {
   templateUrl: './dragula-playground.component.html',
   styleUrls: ['./dragula-playground.component.scss']
 })
-export class DragulaPlaygroundComponent implements OnInit {
+export class DragulaPlaygroundComponent implements OnInit, OnDestroy {
 
-  left = [
+  personsLeft = [
     new Person('Steven'),
     new Person('Paula'),
     new Person('Persephone'),
     new Person('Jacob'),
   ];
-  right = [
+  personsRight = [
     new Person('Delia'),
     new Person('Jackson'),
   ];
@@ -41,6 +41,10 @@ export class DragulaPlaygroundComponent implements OnInit {
         return target.id !== 'left';
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.dragulaService.destroy('PERSON');
   }
 
 }

@@ -20,10 +20,10 @@ export class QuestionDataService {
         label: 'Bravery Rating',
         required: true,
         options: [
-          {key: 'solid',  value: 'Solid'},
-          {key: 'great',  value: 'Great'},
-          {key: 'good',   value: 'Good'},
-          {key: 'unproven', value: 'Unproven'}
+          { key: 'solid',  value: 'Solid' },
+          { key: 'great',  value: 'Great' },
+          { key: 'good',   value: 'Good' },
+          { key: 'unproven', value: 'Unproven' }
         ],
         order: 3
       }),

@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CoreRoutingModule } from './core-routing.module';
 
 // Modules
 import { DragulaModule } from 'ng2-dragula';
 import { SharedModule } from '../shared/shared.module';
-import { AppRoutingModule } from '../app-routing.module';
 
 // Components
-import { DynamicFormComponent } from '../dynamic-form/dynamic-form.component';
-import { DynamicFormQuestionComponent } from '../dynamic-form-question/dynamic-form-question.component';
-import { DragulaPlaygroundComponent } from '../dragula-playground/dragula-playground.component';
-import { DragulaFormsComponent } from '../dragula-forms/dragula-forms.component';
-import { DynamicFormRootComponent } from '../dynamic-form-root/dynamic-form-root.component';
+import { DynamicFormComponent } from '../ang-dynamic-forms/dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from '../ang-dynamic-forms/dynamic-form-question/dynamic-form-question.component';
+import { DragulaPlaygroundComponent } from '../ang-dynamic-forms/dragula-playground/dragula-playground.component';
+import { DragulaFormsComponent } from '../ang-dynamic-forms/dragula-forms/dragula-forms.component';
+import { DynamicFormRootComponent } from '../ang-dynamic-forms/dynamic-form-root/dynamic-form-root.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +24,8 @@ import { DynamicFormRootComponent } from '../dynamic-form-root/dynamic-form-root
   imports: [
     SharedModule,
     ReactiveFormsModule,
-    AppRoutingModule,
+    CoreRoutingModule,
     DragulaModule.forRoot()
-  ],
-  exports: [
-    AppRoutingModule
-  ],
-  providers: []
+  ]
 })
 export class CoreModule { }

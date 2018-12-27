@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DynamicFormRootComponent } from './dynamic-form-root/dynamic-form-root.component';
 
 const appRoutes: Routes = [
   {
     path: 'dynamic-forms',
-    component: DynamicFormRootComponent
+    loadChildren: './core/core.module#CoreModule'
+  },
+  {
+    path: 'map-dynamic-forms',
+    loadChildren: './map-dynamic-forms/map-dynamic-forms.module#MapDynamicFormsModule'
+  },
+  {
+    path: 'dynamic-directive',
+    loadChildren: './dynamic-directive-forms/dynamic-directive-forms.module#DynamicDirectiveFormsModule'
   },
   {
     path: '',
@@ -20,6 +27,4 @@ const appRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}

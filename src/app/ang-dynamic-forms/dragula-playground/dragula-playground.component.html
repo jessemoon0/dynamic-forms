@@ -1,0 +1,8 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10rem">
+  <mat-list dragula="PERSON" id="left" [(dragulaModel)]="personsLeft" class="u-border">
+    <mat-list-item *ngFor="let person of personsLeft">{{person | json}}</mat-list-item>
+  </mat-list>
+  <mat-list dragula="PERSON" id="right" [(dragulaModel)]="personsRight" class="u-border">
+    <mat-list-item *ngFor="let person of personsRight">{{person | json}}</mat-list-item>
+  </mat-list>
+</div>

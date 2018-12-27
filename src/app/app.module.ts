@@ -8,18 +8,23 @@ import { AppComponent } from './app.component';
 
 // Services
 import { TransformToFormGroupService } from './services/transform-to-formgroup.service';
-import {QuestionDataService} from './services/question-data.service';
+import { QuestionDataService } from './services/question-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './core/header/header.component';
+import { MatButtonModule } from '@angular/material';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
-    CoreModule
+    AppRoutingModule,
+    MatButtonModule
   ],
   providers: [TransformToFormGroupService, QuestionDataService],
   bootstrap: [AppComponent]
