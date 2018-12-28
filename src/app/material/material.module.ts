@@ -1,11 +1,29 @@
 import { NgModule } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatListModule,
+  MatRadioModule,
+  MatSelectModule
+} from '@angular/material';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   exports: [
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatMomentDateModule,
+    MatButtonModule
   ]
 })
 export class MaterialModule { }

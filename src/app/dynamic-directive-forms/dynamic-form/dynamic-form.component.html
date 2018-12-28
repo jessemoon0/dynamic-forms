@@ -1,0 +1,11 @@
+<form [formGroup]="myForm"
+      (submit)="onSubmit($event)"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="1rem">
+  <ng-container *ngFor="let field of fields;"
+                appDynamicField
+                [field]="field"
+                [group]="myForm">
+  </ng-container>
+</form>
