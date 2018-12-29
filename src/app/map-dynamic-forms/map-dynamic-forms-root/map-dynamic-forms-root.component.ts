@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { personData } from '../person-example';
 
 @Component({
   selector: 'app-map-dynamic-forms-root',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map-dynamic-forms-root.component.scss']
 })
 export class MapDynamicFormsRootComponent implements OnInit {
-
-  constructor() { }
+  person;
 
   ngOnInit() {
+    this.person = personData;
   }
 
 }

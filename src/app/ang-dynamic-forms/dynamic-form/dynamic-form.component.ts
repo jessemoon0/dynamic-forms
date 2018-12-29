@@ -2,12 +2,12 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 // Models
-import { QuestionBase } from '../../models/base-class/question-base';
+import { QuestionBase } from '../models/base-class/question-base';
 
 // Services
 import { TransformToFormGroupService } from '../../services/transform-to-formgroup.service';
-import { TextboxQuestion } from '../../models/textbox';
-import { DropdownQuestion } from '../../models/dropdown';
+import { TextboxQuestion } from '../models/textbox';
+import { DropdownQuestion } from '../models/dropdown';
 import { DragulaService } from 'ng2-dragula';
 
 @Component({

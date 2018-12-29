@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { QuestionBase } from '../models/base-class/question-base';
+import { QuestionBase } from '../ang-dynamic-forms/models/base-class/question-base';
 
 @Injectable()
 export class TransformToFormGroupService {
