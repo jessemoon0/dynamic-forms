@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { CoreRoutingModule } from './core-routing.module';
 
 // Modules
@@ -23,7 +22,6 @@ import { DynamicFormRootComponent } from '../ang-dynamic-forms/dynamic-form-root
   ],
   imports: [
     SharedModule,
-    ReactiveFormsModule,
     CoreRoutingModule,
     DragulaModule.forRoot()
   ]

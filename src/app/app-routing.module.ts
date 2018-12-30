@@ -15,6 +15,10 @@ const appRoutes: Routes = [
     loadChildren: './dynamic-directive-forms/dynamic-directive-forms.module#DynamicDirectiveFormsModule'
   },
   {
+    path: 'my-forms',
+    loadChildren: './my-forms/my-forms.module#MyFormsModule'
+  },
+  {
     path: '',
     redirectTo: 'dynamic-forms',
     pathMatch: 'full'

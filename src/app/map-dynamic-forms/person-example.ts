@@ -1,5 +1,5 @@
 export const personData = {
-  name: {
+  name1: {
     label: 'Name',
     value: 'Juri',
     type: 'text',
@@ -7,12 +7,12 @@ export const personData = {
       required: true
     }
   },
-  age: {
+  age1: {
     label: 'Age',
     value: 32,
     type: 'text'
   },
-  gender: {
+  gender1: {
     label: 'Gender',
     value: 'M',
     type: 'radio',
@@ -21,7 +21,7 @@ export const personData = {
       { label: 'Female', value: 'F'}
     ]
   },
-  city: {
+  city1: {
     label: 'City',
     value: '39010',
     type: 'select',

@@ -10,7 +10,6 @@ import { InputComponent } from './components/input/input.component';
 import { RadiobuttonComponent } from './components/radiobutton/radiobutton.component';
 import { SelectComponent } from './components/select/select.component';
 import { DynamicFieldDirective } from './directives/dynamic-field.directive';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     SharedModule,
-    ReactiveFormsModule,
     DynamicDirectiveFormsRoutingModule
   ],
   entryComponents: [

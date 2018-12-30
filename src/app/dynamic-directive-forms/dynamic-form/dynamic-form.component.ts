@@ -13,24 +13,25 @@ export class DynamicFormComponent implements OnInit {
 
   @Output() submit: EventEmitter<any> = new EventEmitter<any>();
 
-  myForm: FormGroup;
+  form: FormGroup;
 
   get value() {
-    return this.myForm.value;
+    return this.form.value;
   }
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.myForm = this.createControl();
+    this.form = this.createControl();
   }
 
   onSubmit(event: Event) {
     event.preventDefault();
     event.stopPropagation();
-    if (this.myForm.valid) {
-      this.submit.emit(this.myForm.value);
+    if (this.form.valid) {
+      this.submit.emit(this.form.value);
     } else {
-      this.validateAllFormFields(this.myForm);
+      this.validateAllFormFields(this.form);
     }
   }
 
@@ -63,6 +64,28 @@ export class DynamicFormComponent implements OnInit {
       const control = formGroup.get(field);
       control.markAsTouched({ onlySelf: true });
     });
+  }
+
+  onAddTextBox() {
+    this.fields = [...this.fields, {
+      type: 'input',
+      label: 'Username',
+      inputType: 'text',
+      name: 'nameTest',
+      validations: [
+        {
+          name: 'required',
+          validator: Validators.required,
+          message: 'Name Required'
+        },
+        {
+          name: 'pattern',
+          validator: Validators.pattern('^[a-zA-Z]+$'),
+          message: 'Accept only text'
+        }
+      ]
+    }];
+    this.form = this.createControl();
   }
 
 }

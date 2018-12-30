@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionBase } from '../models/base-class/question-base';
-import { QuestionDataService } from '../../services/question-data.service';
+import { QuestionDataService } from '../services/question-data.service';
 
 @Component({
   selector: 'app-dynamic-form-root',

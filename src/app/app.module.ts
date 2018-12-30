@@ -7,8 +7,8 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 
 // Services
-import { TransformToFormGroupService } from './services/transform-to-formgroup.service';
-import { QuestionDataService } from './services/question-data.service';
+import { TransformToFormGroupService } from './ang-dynamic-forms/services/transform-to-formgroup.service';
+import { QuestionDataService } from './ang-dynamic-forms/services/question-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './core/header/header.component';

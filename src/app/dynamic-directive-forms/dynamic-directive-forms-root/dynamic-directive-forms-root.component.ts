@@ -31,24 +31,6 @@ export class DynamicDirectiveFormsRootComponent {
     },
     {
       type: 'input',
-      label: 'Username',
-      inputType: 'text',
-      name: 'nameTest',
-      validations: [
-        {
-          name: 'required',
-          validator: Validators.required,
-          message: 'Name Required'
-        },
-        {
-          name: 'pattern',
-          validator: Validators.pattern('^[a-zA-Z]+$'),
-          message: 'Accept only text'
-        }
-      ]
-    },
-    {
-      type: 'input',
       label: 'Email Address',
       inputType: 'email',
       name: 'email',
