@@ -1,3 +1,11 @@
-<p>
-  my-dynamic-forms works!
-</p>
+<form [formGroup]="form"
+      (submit)="onSubmit($event)"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="1rem">
+  <ng-container *ngFor="let dataSet of formData;"
+                appDynamicFormControls
+                [myFormControl]="dataSet"
+                [actualForm]="form">
+  </ng-container>
+</form>

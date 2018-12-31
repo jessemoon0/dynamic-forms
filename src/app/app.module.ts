@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import { CoreModule } from './core/core.module';
-
 // Components
 import { AppComponent } from './app.component';
 
@@ -13,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './core/header/header.component';
 import { MatButtonModule } from '@angular/material';
-
 
 @NgModule({
   declarations: [
